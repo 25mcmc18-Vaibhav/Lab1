@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Registration Form</title>
+    <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="regForm">
+        
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Rohan kumar">
+            <span class="error-msg" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="rohan@example.com">
+            <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="********">
+            <div class="strength-container">
+                <div id="strengthBar"></div>
+            </div>
+            <span class="strength-text" id="strengthText"></span>
+            <span class="error-msg" id="passwordError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob">
+            <span class="error-msg" id="dobError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="1234567890" maxlength="10">
+            <span class="error-msg" id="phoneError"></span>
+        </div>
+
+        <button type="submit" id="submitBtn" disabled>Register</button>
+    </form>
+</div>
+
+<script src="task4.js"></script>
+</body>
+</html>
