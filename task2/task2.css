@@ -1,0 +1,57 @@
+body {
+    font-family: 'Inter', sans-serif; /* Google Font */
+    line-height: 1.6;
+    color: black;
+    background-color: white;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Centering with Box Model */
+    padding: 20px;
+}
+
+.header{
+    background-color: #0a4223;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    color: rgb(217, 217, 232);
+    text-decoration: none;
+    font-size: large;
+}
+
+.post {
+    padding: 20px;
+    margin: 10px;
+}
+/* Typography using <span> for specific styling */
+.logo {
+    font-size: 2;
+    border: soild #152049;
+    background-color: #47568a;
+    padding: 7px;
+    margin: 10px;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
