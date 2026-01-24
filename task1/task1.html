@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Honest Console | Game Reviews</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="task1.css">
+
+    <!-- internal css -->
+    <style>
+         /* Using Flexbox for the side-by-side Main and Sidebar layout */
+        .main-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        main {
+            flex: 3; /* Main takes up 75% of width */
+            min-width: 300px;
+        }
+
+        aside {
+            flex: 1; /* Sidebar takes up 25% of width */
+            min-width: 250px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <h1>THE HONEST CONSOLE</h1>
+        <p>Find your pick here</p>
+    </header>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <ul class="navbar-nav ms-3">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Releases">New Releases</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Review">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <h2 class="ms-4 mt-4" id="Releases">New Releases</h2>
+
+    <section class="game-row">
+        <article>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaftpVL32ouEwZLRcznmytgVXiHbiM9xo3bYv15-_SdbsOssKt" alt="Game">
+            <h6>Black Myth: Wukong</h6>
+            <span class="badge bg-success">97 - Fantastic</span>
+        </article>
+        <article>
+            <img src="https://m.media-amazon.com/images/M/MV5BMjU4ODMwYjQtYjQxOC00M2Y3LWE5NDUtMWMwMjgyNjIzMDVlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Game">
+            <h6>Detroit: Become Human</h6>
+            <span class="badge bg-warning text-dark">71 - Mixed</span>
+        </article>
+        <article>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Red_Dead_Redemption.jpg" alt="Game">
+            <h6>Red Dead Redemption</h6>
+            <span class="badge bg-success">89 - Amazing</span>
+        </article>
+        <article>
+            <img src="https://placehold.co/150x200/333/white?text=Pioneers" alt="Game">
+            <h6>Pioneers</h6>
+            <span class="badge bg-success">85 - Great</span>
+        </article>
+        <article>
+            <img src="https://placehold.co/150x200/333/white?text=EvoCreo" alt="Game">
+            <h6>EvoCreo</h6>
+            <span class="badge bg-danger text-dark">42 - Unfavourable</span>
+        </article>
+    </section>
+
+    <section class="main-flex-container" id="Review">
+        <main>
+            <article>
+                <h3 style="padding: 10px; color: rgb(150, 183, 194)">Featured Review: Cyber-Wasteland</h3>
+                <p>Building a tech startup in a digital wasteland. A masterpiece of modern gaming design.</p>
+                <button style="background-color: #00ff00; color: black;">
+                    Score: 9.5
+                </button>
+            </article>
+        </main>
+
+        <aside>
+            <h4>Trending Now</h4>
+            <p>1. Space Marine 2</p>
+            <p>2. Elden Ring DLC</p>
+            <p>3. Best GPUs 2026</p>
+        </aside>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Honest Console - Tech Startup for Gamers</p>
+    </footer>
+
+</body>
+</html>

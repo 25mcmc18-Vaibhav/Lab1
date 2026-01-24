@@ -1,0 +1,52 @@
+/* EXTERNAL CSS */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #4b0082;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Horizontal alignment using Flexbox on the <section> */
+.game-row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+/* Styling the <article> as a card */
+.game-row article {
+    min-width: 270px;
+    background: #1f1f1f;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.game-row img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.main-flex-container main article {
+    background-color: rgb(47, 45, 45);
+    padding: 20px;
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+}
+
+.game-row article img { 
+    width : 100%;
+    height: 340px;
+}
