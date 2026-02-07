@@ -1,0 +1,14 @@
+{
+  "name": "weather-app-ts",
+  "version": "1.0.0",
+  "description": "TypeScript Weather App",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^5.3.0"
+  }
+}

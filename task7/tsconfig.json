@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "ESNext",
+    "strict": true,
+    "noImplicitAny": true,
+    "lib": ["DOM", "ES2017", "DOM.Iterable"],
+    "outDir": "./",
+    "rootDir": "./",
+    "skipLibCheck": true,      /* This skips checking the node_modules files */
+    "types": []                /* This stops Node.js types from interfering */
+  },
+  "exclude": ["node_modules"]  /* This ensures compiler ignores that folder */
+}
