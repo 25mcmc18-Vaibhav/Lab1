@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <book>
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <genre>Classic</genre>
+        <price>599</price>
+        <publish_date>1925-04-10</publish_date>
+    </book>
+    <book>
+        <title>The Hobbit</title>
+        <author>J.R.R. Tolkien</author>
+        <genre>Fantasy</genre>
+        <price>499</price>
+        <publish_date>1937-09-21</publish_date>
+    </book>
+    <book>
+        <title>Dune</title>
+        <author>Frank Herbert</author>
+        <genre>Sci-Fi</genre>
+        <price>899</price>
+        <publish_date>1965-06-08</publish_date>
+    </book>
+    <book>
+        <title>Haroun and the Sea of Stories</title>
+        <author>Salman Rushdie</author>
+        <genre>Classic</genre>
+        <price>399</price>
+        <publish_date>1990-09-26</publish_date>
+    </book>
+    <book>
+        <title>The Haunting of Hill House</title>
+        <author>Shirley Jackson</author>
+        <genre>Horror</genre>
+        <price>699</price>
+        <publish_date>1990-09-26</publish_date>
+    </book>
+
+</catalog>
