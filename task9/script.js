@@ -2,12 +2,36 @@ $(document).ready(function() {
     
     // The JSON Object defining our form structure
     const formStructure = [
-        { id: "fullname", label: "Full Name", type: "text", required: true, errorMsg: "Name is required." },
-        { id: "email", label: "Email Address", type: "email", required: true, errorMsg: "A valid email is required." },
-        { id: "password", label: "Password", type: "password", required: true, errorMsg: "Password must be at least 6 characters." },
-        { id: "country", label: "Country", type: "select", options: ["", "USA", "France", "UK", "India", "Japan", "Italy", "Russia"], required: true, errorMsg: "Please select a country." },
-        // dependsOn property for conditional logic
-        { id: "state", label: "State", type: "select", options: ["", "California", "New York", "Texas", "Ohio", "New Jersey"], required: true, errorMsg: "Please select a state.", dependsOn: "USA" }
+        { id: "fullname", label: "Full Name", type: "text", required: true, 
+            errorMsg: "Name is required." },
+        { id: "email", label: "Email Address", type: "email", required: true, 
+            errorMsg: "A valid email is required." },
+        { id: "password", label: "Password", type: "password", required: true, 
+            errorMsg: "Password must be at least 6 characters." },
+        { 
+            id: "country", 
+            label: "Country", 
+            type: "select", 
+            options: ["", "USA", "France", "UK", "India"], 
+            required: true, 
+            errorMsg: "Please select a country.",
+            // We store the states here so the listener can find them easily
+            stateMapping: {
+                "USA": ["California", "New York", "Texas", "New Jersey"],
+                "France": ["Normandy", "Occitanie"],
+                "UK": ["Greater London", "Manchester", "Scotland"],
+                "India": ["Maharashtra", "Karnataka", "Delhi", "Telangana"]
+            }
+        },
+        { 
+            id: "state", 
+            label: "State", 
+            type: "select", 
+            options: [""], // Starts empty
+            required: true, 
+            errorMsg: "Please select a state.", 
+            dependsOn: true // Marked as a dependent field
+        }
     ];
 
     const $form = $('#dynamicForm');
@@ -46,16 +70,31 @@ $(document).ready(function() {
 
     // Conditional activity
     $('#country').on('change', function() {
-        if ($(this).val() === "USA") {
-            $('#group-state').slideDown(); // Show state dropdown
+        const selectedCountry = $(this).val();
+        const $stateGroup = $('#group-state');
+        const $stateSelect = $('#state');
+
+        // Find the country field in our JSON to get the mapping
+        const countryField = formStructure.find(f => f.id === "country");
+
+        // Clear existing options
+        $stateSelect.empty().append('<option value="">Select an option</option>');
+
+        if (selectedCountry && countryField.stateMapping[selectedCountry]) {
+            // Populate with new states based on selection
+            countryField.stateMapping[selectedCountry].forEach(state => {
+                $stateSelect.append(`<option value="${state}">${state}</option>`);
+            });
+
+            $stateGroup.slideDown(); // Show the field
         } else {
-            $('#group-state').slideUp(); // Hide state dropdown
-            $('#state').val(''); // Reset its value
-            $('#error-state').hide(); // Hide its error if visible
+            $stateGroup.slideUp();   // Hide if no country or no states found
+            $stateSelect.val('');    // Reset value
+            $('#error-state').hide(); // Hide any existing errors
         }
     });
 
-// Form Validation on Submit
+    // Form Validation on Submit
     $form.on('submit', function(e) {
         e.preventDefault(); 
         let isFormValid = true;
