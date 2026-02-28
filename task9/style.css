@@ -7,15 +7,14 @@ body {
 }
 
 .form-container {
-    /* Non-white form background */
     background-color: #1e1e1e; 
     padding: 40px;
     border-radius: 12px;
     width: 100%;
     max-width: 400px;
-    color: #ffffff; /* White text for dark background */
+    color: #ffffff; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid #333; /* Subtle border to define the form */
+    border: 1px solid #333; 
 }
 
 .form-group {
@@ -35,7 +34,6 @@ input, select {
     margin-bottom: 5px;
     border: 1px solid #444;
     border-radius: 6px;
-    /* Dark inputs to match the form */
     background-color: #2a2a2a; 
     color: #ffffff;
 }
