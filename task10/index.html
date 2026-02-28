@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Tabbed Navigation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="tabs-container" id="myTabs">
+        <ul class="tab-links" role="tablist">
+            <li role="presentation"><a href="#home" role="tab">Home</a></li>
+            <li role="presentation"><a href="#about" role="tab">About</a></li>
+            <li role="presentation"><a href="#contact" role="tab">Contact</a></li>
+        </ul>
+
+        <div class="tab-content-wrapper">
+            <div id="home" class="tab-pane" role="tabpanel">
+                <h2>Welcome Home</h2>
+                <p>This is the home section. It loads smoothly and acts as our default tab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, odit libero quod veritatis officia eius explicabo autem sunt. Sit, fugit nostrum. Debitis eos, nihil ad nulla repellat itaque beatae ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, et, dolores eum maiores numquam suscipit quos pariatur quaerat distinctio natus aliquid consequatur facere expedita, quo temporibus necessitatibus officia soluta praesentium!</p>
+            </div>
+            <div id="about" class="tab-pane" role="tabpanel">
+                <h2>About Us</h2>
+                <p>Here is some information about us. Try using your keyboard arrows to navigate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aspernatur odit quidem sapiente placeat saepe ab sed nulla facilis? Pariatur explicabo aut voluptas praesentium labore, architecto debitis? Reiciendis, provident adipisci! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta enim laboriosam sed? Pariatur </p>
+            </div>
+            <div id="contact" class="tab-pane" role="tabpanel">
+                <h2>Contact Information</h2>
+                <p>Feel free to reach out. Notice how the URL hash updates when you click here?</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
